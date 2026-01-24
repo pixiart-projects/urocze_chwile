@@ -11,9 +11,6 @@ overflow-x: hidden;
 font-size: 1rem; 
 }
 
-/* === DESKTOP > 1024px === */
-
-/* NAVIGATION */
 .main-nav {
 position: fixed;
 top: 0;
@@ -45,7 +42,7 @@ font-family: 'Great Vibes', cursive;
 font-size: 45px;
 color: #c4985c;
 }
-/* MENU */
+
 .main-nav__menu {
 height: 90px;
 border-bottom: 1px solid white;
@@ -87,7 +84,6 @@ cursor: pointer;
 color: #c4985c;
 }
 
-/* SECTION */
 .section {
 display: flex;
 flex-direction: column;
@@ -96,7 +92,6 @@ width: 100vw;
 padding-top: 5px;
 }
 
-/* HOME SECTION */
 .section--home {
 padding-top: 0;
 }
@@ -134,7 +129,6 @@ background-position: center top;
 }
 }
 
-/* SECTION TITLE */
 .section__title {
 font-family: 'Cinzel Decorative', serif;
 font-size: 25px;
@@ -163,7 +157,6 @@ height: auto;
 object-fit: contain;
 }
 
-/* SERVICES SECTION */
 .service-container {
 display: flex;
 flex-wrap: wrap;
@@ -219,7 +212,6 @@ transition: transform 0.3s ease;
 transform: translateX(0.5vw);
 }
 
-/* GALLERY SECTION */
 .gallery-section__background {
 height: auto;
 }
@@ -264,7 +256,6 @@ border: 0.5px solid rgba(209, 149, 65, 0.5);
 transform: scale(1.03);
 }
 
-/* POPUP */
 .popup {
 position: fixed;
 display: flex;

@@ -1,4 +1,4 @@
-// === GALLERY POPUP LOGIC ===
+
 const FOTOS = document.querySelectorAll('.gallery__item img');
 const POPUP = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
@@ -7,7 +7,7 @@ const PopupArrowLeft = document.querySelector('.popup__arrow--left');
 const PopupArrowRight = document.querySelector('.popup__arrow--right');
 let currentImgIndex;
 
-// Function to block/unblock body scrolling (IMPORTANT CHANGES)
+
 function toggleBodyScroll(lock) {
 if (lock) {
 document.body.dataset.scrollY = window.scrollY;
@@ -27,7 +27,7 @@ window.scrollTo(0, scrollY);
 }
 }
 
-// Function to close the popup
+
 function closePopup() {
 if (!POPUP.classList.contains('hidden')) {
 POPUP.classList.add('hidden');
@@ -58,14 +58,14 @@ currentImgIndex === 0 ? FOTOS.length - 1 : currentImgIndex - 1;
 PopupImg.src = FOTOS[currentImgIndex].src;
 });
 
-// Add listener for the ESC key to close the popup
+
 document.addEventListener('keydown', (e) => {
 if (e.key === 'Escape') {
 closePopup();
 }
 });
 
-// === NAVIGATION ACTIVE STATE AND SMOOTH SCROLL ===
+
 const navItems = document.querySelectorAll('.menu__item');
 const sections = document.querySelectorAll('.section');
 const mainNav = document.querySelector('.main-nav');
@@ -82,7 +82,7 @@ behavior: 'smooth',
 });
 }
 
-// Mapping and adding listener for click
+
 navItems.forEach((item) => {
 const sectionId = item.getAttribute('data-section');
 const targetSection = document.getElementById(sectionId);
@@ -92,7 +92,6 @@ event.preventDefault();
 
 closePopup();
 
-// Set active link (so it's visible after navigating)
 navItems.forEach((navItem) =>
 navItem.classList.remove('menu__item--active')
 );
@@ -105,7 +104,7 @@ scrollToSection(targetSection);
 });
 });
 
-// Function changing the active menu item while scrolling
+
 function changeDot() {
 const NAV_OFFSET = mainNav.offsetHeight;
 const scrollPosition = window.scrollY + NAV_OFFSET + 10;
@@ -126,7 +125,7 @@ document
 }
 });
 
-// HOME section handling
+
 if (window.scrollY < NAV_OFFSET) {
 navItems.forEach((item) => item.classList.remove('menu__item--active'));
 document
@@ -137,7 +136,7 @@ document
 window.addEventListener('scroll', changeDot);
 document.addEventListener('DOMContentLoaded', changeDot);
 
-// === NAVIGATION BACKGROUND COLOR ===
+
 function handleNavColor() {
 const scrollValue = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -150,7 +149,7 @@ mainNav.classList.remove('main-nav--colored');
 window.addEventListener('scroll', handleNavColor);
 document.addEventListener('DOMContentLoaded', handleNavColor);
 
-// === SCROLL TO TOP BUTTON LOGIC ===
+
 const scrollToTopContainer = document.querySelector('.scroll-to-top');
 const scrollToTopButton = document.querySelector('.scroll-to-top__button');
 const homeSection = document.getElementById('home');
@@ -174,7 +173,7 @@ scrollToTopContainer.classList.add('visible');
 scrollToTopContainer.classList.remove('visible');
 }
 });
-// === HAMBURGER MENU TOGGLE ===
+
 const hamburger = document.querySelector('.hamburger');
 const mainMenu = document.querySelector('.main-nav__menu');
 
